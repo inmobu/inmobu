@@ -17,12 +17,7 @@ const Home: NextPage = () => {
   return (
     <div>
       <Navbar />
-      <FirstSection />
-      <SecondSection />
-      <SecondSectionD/>
-      {/* <ThirdSection /> */}
-      <FourthSection />
-      {/* <CookieBanner /> */}
+
       <Footer/>
     </div>
   )

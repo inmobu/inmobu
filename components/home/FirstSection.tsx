@@ -10,10 +10,10 @@ const FirstSection = () => {
   return (
     <div className="w-full h-screen relative ">
       <div className='absolute w-full h-full z-0 hidden lg:block'>
-        <Image layout="fill" loader={() => myLoader({src:"http://localhost:3000/main.webp", width: 400, quality:10})} src={"http://localhost:3000/main.webp"}/>
+        <Image layout="fill" loader={() => myLoader({src:"/main.webp", width: 400, quality:10})} src={"/main.webp"}/>
       </div>
       <div className='absolute w-full h-full z-0 lg:hidden'>
-        <Image layout="fill" loader={() => myLoader({src:"http://localhost:3000/main-mobile.webp", width: 400, quality:10})} src={"http://localhost:3000/main-mobile.webp"}/>
+        <Image layout="fill" loader={() => myLoader({src:"/main-mobile.webp", width: 400, quality:10})} src={"/main-mobile.webp"}/>
       </div>
       <section className="absolute lg:px-24 h-full flex items-center z-20" >
         <div className="flex lg:flex-wrap items-center">
