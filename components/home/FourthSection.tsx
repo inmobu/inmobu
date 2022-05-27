@@ -5,7 +5,7 @@ const FourthSection = () => {
 
                 <div className="block lg:flex items-center">
                     <div className="hidden lg:block" >
-                        <img src="http://localhost:3000/mls.webp" />
+                        <img src="/mls.webp" />
                     </div>
                     <div className="px-5 w-full lg:w-4/6 md:pr-10 lg:pr-0">
                         <p className="text-green-500 font-black py-2">MLS - (Multiple Listing Service)</p>

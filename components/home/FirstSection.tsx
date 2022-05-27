@@ -25,19 +25,19 @@ const FirstSection = () => {
               CRM & MLS inmobiliario gratis, sin contratos ni costos ocultos y cuentas inlimitadas
             </p>
             <form className=" py-12">
-              <div className="mb-4 grid text-center w-full">
+              {/* <div className="mb-4 grid text-center w-full">
                 <input
                   type="email"
                   id="email"
                   name="email"
                   placeholder='Ingresa tu correo electronico'
                   className="w-full mx-auto lg:w-96 bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
-              </div>
+              </div> */}
               <div className="grid lg:flex gap-2 w-full">
-              <button className="mx-auto my-3 flex gap-1 bg-blue-600 border-0 py-3 px-4 focus:outline-none hover:bg-blue-800 rounded text-lg">
+              <a href="/coomingsoon" className="mx-auto my-3 flex gap-1 bg-blue-600 border-0 py-3 px-4 focus:outline-none hover:bg-blue-800 rounded text-lg">
                 <p className="text-white font-bold ">Comienza ahora</p>
                 <p className="text-blue-100">- Es gratis</p>
-              </button>
+              </a>
               
               {/* <button className="flex gap-1 border border-blue-600  py-3 px-4 focus:outline-none hover:bg-gray-100 rounded text-lg">
                 <p className=" font-bold text-blue-800 ">Habla con un agente</p>
