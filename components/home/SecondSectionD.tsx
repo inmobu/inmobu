@@ -22,10 +22,10 @@ const SecondSectionD = () => {
 
                     </div>
                     <div className="hidden lg:block">
-                        <img className="object-contain" src="http://localhost:3000/marketplace.webp" />
+                        <img className="object-contain" src="/marketplace.webp" />
                     </div>
                     <div className="lg:hidden py-4">
-                        <img className="object-contain" src="http://localhost:3000/socialnetwork.webp" />
+                        <img className="object-contain" src="/socialnetwork.webp" />
                     </div>
 
                 </div>

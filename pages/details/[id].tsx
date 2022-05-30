@@ -1,6 +1,9 @@
 import type { NextPage } from 'next';
+import  { GetServerSideProps } from 'next';
+
 import React, { useState } from 'react'
 import Head from 'next/head'
+
 import Image, { ImageLoaderProps } from 'next/image'
 
 import Navbar from '../../components/Layout/Navbar';
@@ -104,6 +107,22 @@ const schema = yup.object({
 
 
 
+
+// export async function getServerSideProps(context) {
+//     return {
+//       props: {}, // will be passed to the page component as props
+//     }
+//   }
+
+
+export const getServerSideProps: GetServerSideProps = async (context) => {
+    return {
+        props: {
+          title: "Apartamento en Venta Ciudad de Mexico ",
+          slug:"apartamento-en-venta-ciudad-de-mexico"
+        },
+      }
+}
 
 const Home: NextPage = () => {
 
@@ -299,3 +318,5 @@ const Home: NextPage = () => {
 }
 
 export default Home
+
+

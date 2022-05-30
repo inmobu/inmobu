@@ -16,6 +16,7 @@ module.exports = {
   ) {
     return {
       '/': { page: '/' },
+      // '/details' :  { page : '/details'}
     }
   },
   eslint: {
