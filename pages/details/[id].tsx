@@ -253,7 +253,7 @@ const Home: NextPage = () => {
                                             <AntTabs value={value} onChange={handleChange} aria-label="ant example">
                                                 <AntTab label="Contactar un agente" />
                                                 <AntTab label="Resevar una cita" />
-
+                                            </AntTabs>
                                         </Box>
                                     </Box>
                                     <TabPanel value={value} index={0}>
