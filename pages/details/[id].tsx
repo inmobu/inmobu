@@ -1,5 +1,5 @@
 import type { NextPage } from 'next';
-import  { GetServerSideProps } from 'next';
+import { GetServerSideProps } from 'next';
 
 import React, { useState } from 'react'
 import Head from 'next/head'
@@ -30,6 +30,9 @@ import InputEmail from '../../components/ui/InputEmail';
 import InputPhone from '../../components/ui/InputPhone';
 
 import { styled } from '@mui/material/styles';
+
+import NoSsr from '@mui/base/NoSsr';
+
 
 
 interface TabPanelProps {
@@ -118,10 +121,10 @@ const schema = yup.object({
 export const getServerSideProps: GetServerSideProps = async (context) => {
     return {
         props: {
-          title: "Apartamento en Venta Ciudad de Mexico ",
-          slug:"apartamento-en-venta-ciudad-de-mexico"
+            title: "Apartamento en Venta Ciudad de Mexico ",
+            slug: "apartamento-en-venta-ciudad-de-mexico"
         },
-      }
+    }
 }
 
 const Home: NextPage = () => {
@@ -242,62 +245,65 @@ const Home: NextPage = () => {
                                 </button>
                             </div>
                         </div>
-                        {/* <div className="border border-gray-500 rounded-md mt-8">
-                            <div className="px-5 py-2 ">
-                                <Box sx={{ width: '100%' }}>
-                                    <Box sx={{ bgcolor: '#fff' }}>
-                                        <AntTabs value={value} onChange={handleChange} aria-label="ant example">
-                                            <AntTab label="Contactar un agente" />
-                                            <AntTab label="Resevar una cita" />
-                                    
+                        <NoSsr>
+                            <div className="border border-gray-500 rounded-md mt-8">
+                                <div className="px-5 py-2 ">
+                                    <Box sx={{ width: '100%' }}>
+                                        <Box sx={{ bgcolor: '#fff' }}>
+                                            <AntTabs value={value} onChange={handleChange} aria-label="ant example">
+                                                <AntTab label="Contactar un agente" />
+                                                <AntTab label="Resevar una cita" />
+
+                                        </Box>
                                     </Box>
-                                </Box>
-                                <TabPanel value={value} index={0}>
-                                    <form className="py-2" onSubmit={handleSubmit(onSubmit)}>
-                                        <Input label="Nombre" name="name" register={register} error={errors.name} />
-                                        <InputEmail label="Email" name="email" register={register} error={errors.email} />
-                                        <InputPhone label="Telefono" name="phone" register={register} error={errors.phone} />
-                                        <div className="flex">
-                                            <input
-                                                type="checkbox"
-                                                {...register("acceptPolicy")}
-                                                className="h-8 w-8 text-blue-500 focus:ring-blue-600 border-gray-300 rounded"
-                                            />
-                                            <label htmlFor="acceptPolicy" className={errors.acceptPolicy ? "form-checkbox ml-2 block text-sm text-gray-900 bg-red-100 p-2 rounded-lg" : "form-checkbox ml-2 block text-sm text-gray-900 p-2"}>
-                                                <div className="text-xs"> It’s okay to send me emails about Inmobu and  you’re agreeing to our Customer Terms of Service, Privacy Policy, and Cookie Policy.</div>
-                                                {
-                                                    errors.acceptPolicy &&
-                                                    <div className="flex items-center py-2 gap-2" role="alert">
-                                                        <div>
-                                                            <div className="bg-red-600 rounded-full h-4 w-4 flex items-center">
-                                                                <svg
-                                                                    xmlns="http://www.w3.org/2000/svg"
-                                                                    viewBox="0 0 512.001 512.001"
-                                                                    className="h-2 w-2 text-white m-auto"
-                                                                    fill="currentColor"
-                                                                >
-                                                                    <path d="M294.111 256.001L504.109 46.003c10.523-10.524 10.523-27.586 0-38.109-10.524-10.524-27.587-10.524-38.11 0L256 217.892 46.002 7.894C35.478-2.63 18.416-2.63 7.893 7.894s-10.524 27.586 0 38.109l209.998 209.998L7.893 465.999c-10.524 10.524-10.524 27.586 0 38.109 10.524 10.524 27.586 10.523 38.109 0L256 294.11l209.997 209.998c10.524 10.524 27.587 10.523 38.11 0 10.523-10.524 10.523-27.586 0-38.109L294.111 256.001z" />
-                                                                </svg>
+                                    <TabPanel value={value} index={0}>
+                                        <form className="py-2" onSubmit={handleSubmit(onSubmit)}>
+                                            <Input label="Nombre" name="name" register={register} error={errors.name} />
+                                            <InputEmail label="Email" name="email" register={register} error={errors.email} />
+                                            <InputPhone label="Telefono" name="phone" register={register} error={errors.phone} />
+                                            <div className="flex">
+                                                <input
+                                                    type="checkbox"
+                                                    {...register("acceptPolicy")}
+                                                    className="h-8 w-8 text-blue-500 focus:ring-blue-600 border-gray-300 rounded"
+                                                />
+                                                <label htmlFor="acceptPolicy" className={errors.acceptPolicy ? "form-checkbox ml-2 block text-sm text-gray-900 bg-red-100 p-2 rounded-lg" : "form-checkbox ml-2 block text-sm text-gray-900 p-2"}>
+                                                    <div className="text-xs"> It’s okay to send me emails about Inmobu and  you’re agreeing to our Customer Terms of Service, Privacy Policy, and Cookie Policy.</div>
+                                                    {
+                                                        errors.acceptPolicy &&
+                                                        <div className="flex items-center py-2 gap-2" role="alert">
+                                                            <div>
+                                                                <div className="bg-red-600 rounded-full h-4 w-4 flex items-center">
+                                                                    <svg
+                                                                        xmlns="http://www.w3.org/2000/svg"
+                                                                        viewBox="0 0 512.001 512.001"
+                                                                        className="h-2 w-2 text-white m-auto"
+                                                                        fill="currentColor"
+                                                                    >
+                                                                        <path d="M294.111 256.001L504.109 46.003c10.523-10.524 10.523-27.586 0-38.109-10.524-10.524-27.587-10.524-38.11 0L256 217.892 46.002 7.894C35.478-2.63 18.416-2.63 7.893 7.894s-10.524 27.586 0 38.109l209.998 209.998L7.893 465.999c-10.524 10.524-10.524 27.586 0 38.109 10.524 10.524 27.586 10.523 38.109 0L256 294.11l209.997 209.998c10.524 10.524 27.587 10.523 38.11 0 10.523-10.524 10.523-27.586 0-38.109L294.111 256.001z" />
+                                                                    </svg>
+                                                                </div>
+                                                            </div>
+                                                            <div className="text-red-600 text-sm">
+                                                                {errors.acceptPolicy?.message}
                                                             </div>
                                                         </div>
-                                                        <div className="text-red-600 text-sm">
-                                                            {errors.acceptPolicy?.message}
-                                                        </div>
-                                                    </div>
-                                                }
+                                                    }
 
-                                            </label>
-                                        </div>
+                                                </label>
+                                            </div>
 
-                                        <button className="bg-blue-600 text-white p-3 w-full rounded-md my-2"> Enviar</button>
-                                    </form>
-                                </TabPanel>
-                                <TabPanel value={value} index={1}>
-                                    Item Two
-                                </TabPanel>
+                                            <button className="bg-blue-600 text-white p-3 w-full rounded-md my-2"> Enviar</button>
+                                        </form>
+                                    </TabPanel>
+                                    <TabPanel value={value} index={1}>
+                                        Item Two
+                                    </TabPanel>
+                                </div>
+
                             </div>
+                        </NoSsr>
 
-                        </div> */}
 
                     </div>
                 </div>
