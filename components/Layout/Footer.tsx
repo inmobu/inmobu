@@ -9,8 +9,8 @@ const Footer = () => {
             <nav className="flex flex-wrap justify-center md:justify-start gap-x-4 gap-y-2 md:gap-6">
               <a href="https://www.iubenda.com/privacy-policy/29595082" className="text-gray-500 hover:text-indigo-500 active:text-indigo-600 transition duration-100">Politica de Privacidad</a>
               <a href="https://www.iubenda.com/privacy-policy/29595082/cookie-policy" className="text-gray-500 hover:text-indigo-500 active:text-indigo-600 transition duration-100">Cookies</a>
-              <a href="https://www.iubenda.com/privacy-policy/11265388" className="text-gray-500 hover:text-indigo-500 active:text-indigo-600 transition duration-100">Privacy Policy</a>
-              <a href="https://www.iubenda.com/privacy-policy/11265388/cookie-policy" className="text-gray-500 hover:text-indigo-500 active:text-indigo-600 transition duration-100">Cookie Policy</a>
+              {/* <a href="https://www.iubenda.com/privacy-policy/11265388" className="text-gray-500 hover:text-indigo-500 active:text-indigo-600 transition duration-100">Privacy Policy</a>
+              <a href="https://www.iubenda.com/privacy-policy/11265388/cookie-policy" className="text-gray-500 hover:text-indigo-500 active:text-indigo-600 transition duration-100">Cookie Policy</a> */}
             </nav>
      
             <div className="flex gap-4">

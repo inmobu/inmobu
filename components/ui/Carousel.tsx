@@ -1,6 +1,8 @@
-import React from "react"
+import React, { Suspense, lazy } from "react"
 import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext, Image } from "pure-react-carousel";
-import openModalGallery from "./openModalGallery"
+import openModalGallery from "./openModalGallery";
+import SuspenseCarousel from "../ui/SuspenseCarousel";
+
 
 interface CarouselProps {
     src: Array<string>,
@@ -25,10 +27,14 @@ class Carousel extends React.Component<CarouselProps, CarouselState> {
             height: this.carouselRef.current?.scrollHeight ? this.carouselRef.current?.scrollHeight : 0
         })
     }
-    onClick(currentSlider:number) {
-        this.props.lightbox && openModalGallery(this.props.src, currentSlider) 
+    onClick(currentSlider: number) {
+        this.props.lightbox && openModalGallery(this.props.src, currentSlider)
     }
     render() {
+
+ 
+
+        
         return (
             <>
                 <div ref={this.carouselRef} className="w-full h-full relative overflow-hidden">
@@ -44,11 +50,13 @@ class Carousel extends React.Component<CarouselProps, CarouselState> {
                             classNameAnimation="transition-all ease-in-out duration-1000 p-0 m-0"
                             style={{ listStyle: "none" }}
                         >
+               
                             {
                                 this.props.src.map((src, i) => {
                                     return (
-                                        <Slide key={i+1} index={i} className="relative block list-none float-left">
-                                            <Image className="absolute w-full inset-0 object-cover" onClick={this.onClick.bind(this,i)} hasMasterSpinner={false} src={src} style={{ height: `${this.state.height}px` }} />
+                                        <Slide  key={i + 1} index={i} className="relative block list-none float-left">
+                                            <Image  renderLoading={() => <SuspenseCarousel/>} className="absolute w-full inset-0 object-cover" onClick={this.onClick.bind(this, i)} hasMasterSpinner={false} src={src} style={{ height: `${this.state.height}px` }}>
+                                            </Image>
                                         </Slide>)
                                 })
                             }

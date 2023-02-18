@@ -1,0 +1,21 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-inmobu-dev-90825-authRole",
+      "UnauthRoleArn": "arn:aws:iam::889119412469:role/amplify-inmobu-dev-90825-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::889119412469:role/amplify-inmobu-dev-90825-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-inmobu-dev-90825-deployment",
+      "UnauthRoleName": "amplify-inmobu-dev-90825-unauthRole",
+      "StackName": "amplify-inmobu-dev-90825",
+      "StackId": "arn:aws:cloudformation:us-east-1:889119412469:stack/amplify-inmobu-dev-90825/4e15d7e0-e1b4-11ec-a8e4-0e0e59a6f389",
+      "AmplifyAppId": "d2zonseg79n8px"
+    },
+    "categories": {
+      "auth": {
+        "inmobud61509d9": {},
+        "true": {}
+      }
+    }
+  }
+}

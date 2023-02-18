@@ -21,7 +21,7 @@ const Navbar = () => {
                 </div> */}
             </div>
             <div className="w-full flex lg:hidden items-center h-full px-5">
-                {/* <a > <RiMenu2Line size={20} /></a> */}
+                <button ><RiMenu2Line size={20} /></button>
                 <div className="w-full h-full items-center flex  text-center">
                     <button className="m-auto"><LogoInmobu height={40} /></button>
                 </div>

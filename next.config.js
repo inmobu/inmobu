@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 module.exports = {
   reactStrictMode: true,
+  concurrentFeatures: true,
   // i18n: {
   //   locales: ['es-419','es-CO','es-MX','es-AR','es-ES','en-US'],
   //   defaultLocale: 'en-US',
@@ -16,6 +17,7 @@ module.exports = {
   ) {
     return {
       '/': { page: '/' },
+      '/lisintg': { page: 'listing'}
       // '/details' :  { page : '/details'}
     }
   },
